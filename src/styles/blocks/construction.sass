@@ -1,0 +1,66 @@
+.construction-container
+    background-size: cover
+    background-repeat: no-repeat
+    height: 100vh
+    background-position: center
+    display: flex
+    flex-direction: column
+
+    &:before 
+        content: ""
+        position: absolute;
+        top: 0px
+        right: 0px
+        bottom: 0px
+        left: 0px
+        background-color: rgba(224, 224, 224, 0.1)
+    
+
+    @media screen and (min-width: 200px)
+        .bottom-logo
+            max-height: 64px
+
+    @media screen and (min-width: 400px)
+        .bottom-logo
+            max-height: 120px
+
+    @media screen and (min-width: 200px)
+        .message-container
+            padding: 30px
+
+    @media screen and (min-width: 400px)
+        .message-container
+            padding: 40px
+   
+    .message-container
+        flex-grow: 1    
+        display: flex;
+        align-items: center;
+
+
+    @media screen and (min-width: 200px)
+       .logo-container
+            padding: 30px
+
+    @media screen and (min-width: 400px)
+        .logo-container
+            padding: 50px
+
+    
+    @media screen and (min-width: 200px)
+        h3
+            font-size: 18px
+            word-spacing: 4px
+
+    @media screen and (min-width: 400px)
+        h3
+            font-size: 42px
+            word-spacing: 4px
+
+    @media screen and (min-width: 200px)
+        p
+            font-size: 16px
+
+    @media screen and (min-width: 400px)
+        p
+            font-size: 28px
