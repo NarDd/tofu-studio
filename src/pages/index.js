@@ -4,11 +4,13 @@ import Construction from '../components/construction'
 import "../styles/index.sass";
 // import Masonry from 'react-masonry-component'
 // import Img from 'gatsby-image'
-// import Layout from "../components/layout"
+import Layout from "../components/layout"
 
 const IndexPage = ({ data }) => (
   <div>
-    <Construction/>
+    <Layout>
+      <Construction/>
+    </Layout>
   </div>
   // <Layout>
   //   <Masonry className="showcase">
@@ -35,22 +37,22 @@ const IndexPage = ({ data }) => (
 
 export default IndexPage
 
-// export const query = graphql`
-//   query IndexQuery {
-//     allDatoCmsWork(sort: { fields: [position], order: ASC }) {
-//       edges {
-//         node {
-//           id
-//           title
-//           slug
-//           excerpt
-//           coverImage {
-//             fluid(maxWidth: 450, imgixParams: { fm: "jpg", auto: "compress" }) {
-//               ...GatsbyDatoCmsSizes
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query IndexQuery {
+    allDatoCmsWork(sort: { fields: [position], order: ASC }) {
+      edges {
+        node {
+          id
+          title
+          slug
+          excerpt
+          coverImage {
+            fluid(maxWidth: 450, imgixParams: { fm: "jpg", auto: "compress" }) {
+              ...GatsbyDatoCmsSizes
+            }
+          }
+        }
+      }
+    }
+  }
+`

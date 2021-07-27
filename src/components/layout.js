@@ -44,12 +44,14 @@ const TemplateWrapper = ({ children }) => {
         }
       `}
       render={data => (
-        <div className={`container ${showMenu ? "is-open" : ""}`}>
+        // <div className={`container ${showMenu ? "is-open" : ""}`}>
+        <div>
           <HelmetDatoCms
             favicon={data.datoCmsSite.faviconMetaTags}
             seo={data.datoCmsHome.seoMetaTags}
           />
-          <div className="container__sidebar">
+          {children}
+          {/* <div className="container__sidebar">
             <div className="sidebar">
               <h6 className="sidebar__title">
                 <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
@@ -103,7 +105,7 @@ const TemplateWrapper = ({ children }) => {
               </div>
             </div>
             {children}
-          </div>
+          </div> */}
         </div>
       )}
     />
