@@ -46,6 +46,7 @@ const TemplateWrapper = ({ children }) => {
       render={data => (
         // <div className={`container ${showMenu ? "is-open" : ""}`}>
         <div>
+          {console.log(data)}
           <HelmetDatoCms
             favicon={data.datoCmsSite.faviconMetaTags}
             seo={data.datoCmsHome.seoMetaTags}
